@@ -15,6 +15,8 @@ import Home from './pages/Home';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import AddCraft from './pages/AddCraft';
+import PrivateRoute from './pages/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>
       },
+      {
+        path: '/addCraft',
+        element: <PrivateRoute><AddCraft></AddCraft></PrivateRoute>
+      }
       
     ]
   },

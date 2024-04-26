@@ -1,3 +1,4 @@
+import Banner from "./Banner";
 import Footer from "./Footer";
 import Nav from "./Nav";
 
@@ -7,7 +8,10 @@ const Home = () => {
         <div>
             
             <Nav></Nav>
-            {/* <Footer></Footer> */}
+            <Banner></Banner>
+           <div className="mt-20">
+           <Footer></Footer>
+           </div>
         </div>
     );
 };

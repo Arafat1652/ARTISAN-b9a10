@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import Footer from "./Footer";
+import Nav from "./Nav";
 
 
 const Login = () => {
@@ -75,7 +76,7 @@ const Login = () => {
     return (
         
      <div>
-        
+        <Nav></Nav>
         
            <div className="w-full max-w-md my-10 p-8 space-y-3 rounded-xl mx-auto bg-base-200 text-gray-100">
         <h1 className="text-2xl font-bold text-center text-gray-700">Login</h1>
@@ -93,7 +94,7 @@ const Login = () => {
                     <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                 </div>
             </div>
-            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-[#ffcc41]">Sign in</button>
+            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-[#13e5c0]">Sign in</button>
         </form>
 
         <p className="text-green-500">{successLogin}</p>

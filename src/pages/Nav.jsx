@@ -12,7 +12,7 @@ const Nav = () => {
     const navLink = <>
     <li className="mr-4 font-semibold"><NavLink to='/'>Home</NavLink></li>
     <li className="mr-4 font-semibold"><NavLink to='/allArt'>All Art & Craft Items</NavLink></li>
-    <li className="mr-4 font-semibold"><NavLink to='/add'>Add Craft Item</NavLink></li>
+    <li className="mr-4 font-semibold"><NavLink to='/addCraft'>Add Craft Item</NavLink></li>
     <li className="mr-4 font-semibold"><NavLink to='/myCraft'>My Art & Craft List</NavLink></li>
 </>
 
@@ -22,7 +22,8 @@ const handleLogOut =()=>{
 }
 
   return (
-    <div  className="navbar bg-base-100 max-w-[98%] mx-auto">
+    <div className="bg-[#273c48] text-white py-3 ">
+        <div  className="navbar max-w-[98%] mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,7 +44,7 @@ const handleLogOut =()=>{
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-gray-800 rounded-box w-52"
           >
          {navLink}
           </ul>
@@ -68,15 +69,16 @@ const handleLogOut =()=>{
                   </div>
                   </div>
               </div>
-           <button onClick={handleLogOut} className="btn bg-[#fb8053] ml-4  font-bold px-4">Logout</button>
-           </> :  <><Link to='/login'><button className="btn btn-primary">Login</button></Link>
-                    <Link to='/register'><button className="btn btn-secondary ml-2">Register</button></Link>
+           <button onClick={handleLogOut} className="btn bg-[#fb8053] ml-4 text-white font-bold px-4">Logout</button>
+           </> :  <><Link to='/login'><button className="btn bg-[#13e5c0] text-black">LOGIN</button></Link>
+                    <Link to='/register'><button className="btn bg-[#BACD92] ml-2">Register</button></Link>
                     </>
         }
     
         {/* avatar */}
 
       </div>
+    </div>
     </div>
   );
 };

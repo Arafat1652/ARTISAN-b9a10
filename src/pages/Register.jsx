@@ -82,7 +82,7 @@ const Register = () => {
 
                 <span className="absolute top-9 right-4 text-black" onClick={()=> setShowPassword(!showPassword)}>{showPassword? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash> }</span>
             </div>
-            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-[#ffcc41]">Register</button>
+            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-[#13e5c0]">Register</button>
         </form>
 
         <p className="text-green-500">{successReg}</p>
