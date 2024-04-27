@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import Footer from "./Footer";
 
 
 const MyCraftPage = () => {
@@ -88,6 +89,9 @@ console.log(craftItem);
                     </div>
                   </div>)
                 }
+            </div>
+            <div className="mt-20">
+                <Footer></Footer>
             </div>
         </div>
     );
