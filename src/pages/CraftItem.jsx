@@ -7,7 +7,7 @@ const CraftItem = ({craft}) => {
     <div className="card card-compact  group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
       <figure>
         <img
-        className="lg:h-[350px] md:h-[350px] object-cover object-center"
+        className="lg:h-[350px] md:h-[350px] w-full object-cover object-center"
           src={photoUrl}
           alt="Shoes"
           
@@ -22,7 +22,7 @@ const CraftItem = ({craft}) => {
         <hr />
         <div className="flex justify-between mt-2 mb-4">
                 <h3 className="flex items-center text-lg gap-1"><FaRegStar ></FaRegStar>{rating}</h3>
-                <h3 data-aos='fade-right' data-aos-delay='1100' className="text-lg font-bold">{price}</h3>
+                <h3 className="text-lg font-bold">{price}</h3>
             </div>
             
         {/* <div className="card-actions w-full">

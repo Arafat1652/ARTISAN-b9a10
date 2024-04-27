@@ -7,7 +7,7 @@ import Nav from "./Nav";
 
 const Home = () => {
     const crafts = useLoaderData()
-    console.log(crafts);
+    // console.log(crafts);
     return (
         <div>
             

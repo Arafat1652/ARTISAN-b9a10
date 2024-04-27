@@ -19,6 +19,8 @@ import AddCraft from './pages/AddCraft';
 import PrivateRoute from './pages/PrivateRoute';
 import ViewDetailCraft from './pages/ViewDetailCraft';
 import AllCraftItems from './pages/AllCraftItems';
+import MyCraftPage from './pages/MyCraftPage';
+import UpdateCraft from './pages/UpdateCraft';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
         path: '/allArt',
         element: <AllCraftItems></AllCraftItems>,
         loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
+      },
+      {
+        path: '/myCraft',
+        element: <PrivateRoute><MyCraftPage></MyCraftPage></PrivateRoute>
       }
     ]
   },
@@ -53,7 +59,12 @@ const router = createBrowserRouter([
     path: '/crafts/:id',
     element: <PrivateRoute><ViewDetailCraft></ViewDetailCraft></PrivateRoute>,
     loader: ({params})=>fetch(`https://b9a10-ar-02-server.vercel.app/crafts/${params.id}`)
+  },
+  {
+    path:'/update/:id',
+    element: <UpdateCraft></UpdateCraft>
   }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

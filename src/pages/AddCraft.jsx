@@ -183,10 +183,11 @@ const AddCraft = () => {
               </label>
               <label className="input-group">
                 <input
+                
                   type="text"
                   defaultValue={userEmail}
                   className="input input-bordered w-full"
-                />
+                  readOnly />
               </label>
             </div>
 
@@ -199,7 +200,7 @@ const AddCraft = () => {
                   type="text"
                   defaultValue={userName}
                   className="input input-bordered w-full "
-                />
+                  readOnly />
               </label>
             </div>
           </div>
