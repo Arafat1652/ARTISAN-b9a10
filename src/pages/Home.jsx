@@ -15,10 +15,10 @@ const Home = () => {
             <Banner></Banner>
             <div>
                 <h3 className="text-3xl text-[#131313] mt-24 text-center font-semibold">Crafts Items</h3>
-                <p className="w-[650px] mx-auto  mb-10 text-center mt-3 text-[#13131380]">Step into our vibrant world of creativity at ARTISAN, where imagination knows no bounds! Our art and craft store is a treasure trove for enthusiasts of all ages and skill levels.</p>
-                <div className="max-w-7xl mx-auto grid grid-cols-3 gap-8">
+                <p className="lg:w-[650px] mx-auto  mb-10 text-center mt-3 text-[#13131380]">Step into our vibrant world of creativity at ARTISAN, where imagination knows no bounds! Our art and craft store is a treasure trove for enthusiasts of all ages and skill levels.</p>
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-8 p-3 lg:p-0">
                 {
-                    crafts.map(craft=><CraftItem key={craft._id} craft={craft}></CraftItem>)
+                    crafts.slice(0,6).map(craft=><CraftItem key={craft._id} craft={craft}></CraftItem>)
                 }
                 </div>
             

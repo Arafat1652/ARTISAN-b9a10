@@ -10,7 +10,7 @@ const Footer = () => {
 				<div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#ffcc41]">
 				<RiBuilding2Fill size={20} className="fill-indigo-600"></RiBuilding2Fill>
 				</div>
-				<span className="self-center text-2xl font-semibold">EliteEstate</span>
+				<span className="self-center text-2xl font-semibold">ARTISAN</span>
 			</a>
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

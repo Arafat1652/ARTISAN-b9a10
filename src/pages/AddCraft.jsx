@@ -24,7 +24,7 @@ const AddCraft = () => {
     const craft = {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl, userName, userEmail}  
     console.log(craft);
 
-    fetch('http://localhost:5000/crafts', {
+    fetch('https://b9a10-ar-02-server.vercel.app/crafts', {
       method: "POST",
       headers:{
         'content-type': 'application/json'
