@@ -18,6 +18,7 @@ import Login from './pages/Login';
 import AddCraft from './pages/AddCraft';
 import PrivateRoute from './pages/PrivateRoute';
 import ViewDetailCraft from './pages/ViewDetailCraft';
+import AllCraftItems from './pages/AllCraftItems';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path: '/addCraft',
         element: <PrivateRoute><AddCraft></AddCraft></PrivateRoute>
       },
+      {
+        path: '/allArt',
+        element: <AllCraftItems></AllCraftItems>,
+        loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
+      }
     ]
   },
   {
@@ -46,7 +52,7 @@ const router = createBrowserRouter([
   {
     path: '/crafts/:id',
     element: <PrivateRoute><ViewDetailCraft></ViewDetailCraft></PrivateRoute>,
-    loader: ({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
+    loader: ({params})=>fetch(`https://b9a10-ar-02-server.vercel.app/crafts/${params.id}`)
   }
 ]);
 

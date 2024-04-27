@@ -77,16 +77,18 @@ const ViewDetailCraft = () => {
                    </div>
                  </div>
                  <div className="flex gap-4 mt-4">
-                 <h3  className="flex items-center text-lg gap-1"><FaRegStar ></FaRegStar>{rating}</h3>
-                 <h4  className=" flex items-center gap-1 text-blue-800"><MdAccessTime></MdAccessTime>{processingTime}</h4>
+                 <h3  className="flex items-center text-lg gap-1"><FaRegStar className="text-purple-400"></FaRegStar>{rating}</h3>
+                 <h4  className=" flex items-center text-lg gap-1"><MdAccessTime className="text-purple-400"></MdAccessTime>{processingTime}</h4>
              </div>
              <hr className="my-4"/>
-                 <div className="mb-4">
-                 Stock Status : {''} 
-                   <span  className="font-bold ">
-                     {stockStatus}
-                   </span>
-                 </div>
+             <div >
+                     <span className="font-bold mr-1 ">
+                       Stock Status :
+                     </span>
+                     <span className="text-[#fb8053] font-bold ">
+                       {stockStatus}
+                     </span>
+                   </div>
                </div>
              </div>
            </div>
