@@ -10,8 +10,10 @@ const UpdateCraft = () => {
     console.log(id);
     const [arts, setArts] = useState({})
 
+    // http://localhost:5000/singleCrafts/${id}
+
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleCrafts/${id}`)
+        fetch(`https://b9a10-ar-02-server.vercel.app/singleCrafts/${id}`)
         .then(res=>res.json())
         .then(data=>{
             setArts(data)
@@ -35,7 +37,9 @@ const UpdateCraft = () => {
         const craft = {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl}  
         console.log(craft);
 
-        fetch(`http://localhost:5000/updateCrafts/${id}`,{
+        // http://localhost:5000/updateCrafts/${id}
+
+        fetch(`https://b9a10-ar-02-server.vercel.app/updateCrafts/${id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'

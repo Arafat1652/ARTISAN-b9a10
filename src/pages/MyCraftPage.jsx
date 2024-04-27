@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import Nav from "./Nav";
 import { FaRegStar } from "react-icons/fa";
-import { AiTwotoneTag } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -12,9 +11,10 @@ const MyCraftPage = () => {
     const { user } = useContext(AuthContext)
     const [craftItem, setCraftItem] = useState([]);
     
-   
+    // http://localhost:5000/myCrafts/${user?.email}
+
     useEffect(() => {
-        fetch(`http://localhost:5000/myCrafts/${user?.email}`)
+        fetch(`https://b9a10-ar-02-server.vercel.app/myCrafts/${user?.email}`)
           .then((res) => res.json())
           .then((data) => {
             setCraftItem(data);
@@ -33,7 +33,7 @@ const MyCraftPage = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://b9a10-ar-02-server.vercel.app/delete/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -52,7 +52,7 @@ const MyCraftPage = () => {
             }
         });
     }
-    
+    // http://localhost:5000/delete/${_id}
 console.log(craftItem);
     return (
         <div>
