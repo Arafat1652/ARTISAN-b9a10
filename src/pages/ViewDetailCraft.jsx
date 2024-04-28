@@ -49,7 +49,7 @@ const ViewDetailCraft = () => {
                  </div>
                </div>
                <div className="md:flex-1 px-4">
-                 <h2  className="text-4xl lg:mt-16 font-bold mb-2">
+                 <h2  className="text-4xl lg:mt-6 font-bold mb-2">
                   {itemName}
                  </h2>
                  <h3  className="flex items-center text-lg font-bold gap-2 text-[#13e5c0]"><AiTwotoneTag className="fill-[#13e5c0]"></AiTwotoneTag>{subcategoryName}</h3>
@@ -81,7 +81,7 @@ const ViewDetailCraft = () => {
                  <h4  className=" flex items-center text-lg gap-1"><MdAccessTime className="text-purple-400"></MdAccessTime>{processingTime}</h4>
              </div>
              <hr className="my-4"/>
-             <div >
+                  <div >
                      <span className="font-bold mr-1 ">
                        Stock Status :
                      </span>
@@ -89,6 +89,8 @@ const ViewDetailCraft = () => {
                        {stockStatus}
                      </span>
                    </div>
+                   <h3 className=" mt-4">User Name : <span className="font-bold">{userName}</span></h3>
+                   <h3 className=" mt-4">User Email: <span className="font-bold">{userEmail}</span></h3>
                </div>
              </div>
            </div>

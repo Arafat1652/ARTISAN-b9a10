@@ -65,7 +65,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/update/:id',
-    element: <UpdateCraft></UpdateCraft>
+    element: <PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>
   },
   {
     path: '/artCraft/:subcategoryName',

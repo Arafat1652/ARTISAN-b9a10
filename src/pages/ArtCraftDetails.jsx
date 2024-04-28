@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AiTwotoneTag } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 
 const ArtCraftDetails = () => {
@@ -10,7 +12,9 @@ const ArtCraftDetails = () => {
     // const  {_id,itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl, userName, userEmail} = subItems
     console.log(subItem);
     return (
-        <div className="grid max-w-7xl gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+        <div className="">
+            <Nav></Nav>
+            <div className="grid max-w-7xl my-24 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
             {
                 subItem.map(item=>  <div key={item._id} className="card card-compact  group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <figure>
@@ -40,6 +44,8 @@ const ArtCraftDetails = () => {
                 </div>
               </div>)
             }
+            </div>
+            <Footer></Footer>
         </div>
        
     );
