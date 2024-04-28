@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
+        // loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
       },
       {
         path: '/addCraft',
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: '/allArt',
         element: <AllCraftItems></AllCraftItems>,
-        loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
+        // loader: ()=>fetch('https://b9a10-ar-02-server.vercel.app/crafts')
       },
       {
         path: '/myCraft',

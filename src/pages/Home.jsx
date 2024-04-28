@@ -1,13 +1,28 @@
-import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CraftItem from "./CraftItem";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import { useEffect, useState } from "react";
 
 
 const Home = () => {
-    const crafts = useLoaderData()
+    // const crafts = useLoaderData()
+    const [crafts, setCrafts] = useState(null)
     // console.log(crafts);
+    useEffect(()=>{
+        fetch('https://b9a10-ar-02-server.vercel.app/crafts')
+        .then(res=>res.json())
+        .then(data=>setCrafts(data))
+    },[])
+
+
+    if(!crafts){
+           return (
+            <div className="text-center z-10 ">
+               <span className="loading loading-spinner loading-lg text-error mt-24"></span>
+            </div>
+        );
+    }
     return (
         <div>
             
