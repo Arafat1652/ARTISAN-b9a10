@@ -22,6 +22,7 @@ import AllCraftItems from './pages/AllCraftItems';
 import MyCraftPage from './pages/MyCraftPage';
 import UpdateCraft from './pages/UpdateCraft';
 import ErrorPage from './pages/ErrorPage';
+import ArtCraftDetails from './pages/ArtCraftDetails';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: '/myCraft',
         element: <PrivateRoute><MyCraftPage></MyCraftPage></PrivateRoute>
-      }
+      },
     ]
   },
   {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
   {
     path:'/update/:id',
     element: <UpdateCraft></UpdateCraft>
+  },
+  {
+    path: '/artCraft/:subcategoryName',
+    element: <PrivateRoute><ArtCraftDetails></ArtCraftDetails></PrivateRoute>,
+    loader: ({params}) => fetch(`https://b9a10-ar-02-server.vercel.app/cardItem/${params.subcategoryName}`)
   }
 
 ]);

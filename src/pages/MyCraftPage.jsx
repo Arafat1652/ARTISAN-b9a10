@@ -26,7 +26,7 @@ const MyCraftPage = () => {
     }
   }
 
-  // http://localhost:5000/myCrafts/${user?.email}
+
 
   useEffect(() => {
     fetch(`https://b9a10-ar-02-server.vercel.app/myCrafts/${user?.email}`)
@@ -67,7 +67,7 @@ const MyCraftPage = () => {
       }
     });
   };
-  // http://localhost:5000/delete/${_id}
+
   if (!craftItem) {
     return (
       <div className="text-center ">

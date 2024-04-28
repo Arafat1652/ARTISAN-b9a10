@@ -28,7 +28,7 @@ const Banner = () => {
 
    <SwiperSlide> <div className="z-0">
           <div className="hero h-[80vh] bg-cover object-center rounded-lg " style={{
-          backgroundImage:"url(https://images.unsplash.com/photo-1582201957424-621320ad670d?q=80&w=2209&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          backgroundImage:"url(https://images.unsplash.com/photo-1573297627466-6bed413a43f1?q=80&w=2232&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
         }}>
            <div className="hero-content lg:mr-60 md:mr-40">
               <div>
