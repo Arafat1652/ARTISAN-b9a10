@@ -21,11 +21,13 @@ import ViewDetailCraft from './pages/ViewDetailCraft';
 import AllCraftItems from './pages/AllCraftItems';
 import MyCraftPage from './pages/MyCraftPage';
 import UpdateCraft from './pages/UpdateCraft';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path: '/',
