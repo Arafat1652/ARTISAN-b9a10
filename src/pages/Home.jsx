@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
 import OurTeam from "./OurTeam";
+import Faq from "./Faq";
 
 
 const Home = () => {
@@ -43,6 +44,7 @@ const Home = () => {
            <div className="mt-20">
             <ArtAndCraft></ArtAndCraft>
             <OurTeam></OurTeam>
+            <Faq></Faq>
            <Footer></Footer>
            </div>
         </div>

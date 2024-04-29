@@ -7,7 +7,7 @@ const OurTeam = () => {
 <div className=" max-w-7xl my-24 mx-auto lg:px-0 md:px-6">
  
   <section className="mb-32 text-center">
-    <h2 className="text-3xl font-bold">
+    <h2 className="text-4xl font-bold">
       Meet the <u className="text-primary dark:text-primary-400">team</u>
     </h2>
         <p className="mb-12 mt-2"> Meet the brains
@@ -16,7 +16,7 @@ These people work on making our product best</p>
       <div className="mb-12 lg:mb-0 border-dashed lg:border-4">
         <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg" alt="avatar" />
         <h5 className="mb-4 text-lg font-bold">Alan Turing</h5>
-        <p className="mb-6">Frontend Developer</p>
+        <p className="mb-6">CEO</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
      
@@ -47,7 +47,7 @@ These people work on making our product best</p>
       <div className="mb-12 lg:mb-0 border-dashed lg:border-4">
         <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).jpg" alt="avatar" />
         <h5 className="mb-4 text-lg font-bold">Veronica Smith</h5>
-        <p className="mb-6">Backend Developer</p>
+        <p className="mb-6">Web Developer</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
         
@@ -78,7 +78,7 @@ These people work on making our product best</p>
       <div className="mb-12 md:mb-0 border-dashed lg:border-4">
         <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).jpg" alt="avatar" />
         <h5 className="mb-4 text-lg font-bold">Tom Johnson</h5>
-        <p className="mb-6">Digital Marketing Analyst</p>
+        <p className="mb-6">Marketing Analyst</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
          
@@ -107,7 +107,7 @@ These people work on making our product best</p>
       <div className="mb-12 md:mb-0 border-dashed lg:border-4">
         <img className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).jpg" alt="avatar" />
         <h5 className="mb-4 text-lg font-bold">Emma Lovelace</h5>
-        <p className="mb-6">Web Designer</p>
+        <p className="mb-6">Store Manager</p>
         <ul className="mx-auto flex list-inside justify-center">
           <a href="#!" className="px-2">
         
