@@ -118,7 +118,7 @@ const MyCraftPage = () => {
         {displayCraft.map((craft) => (
           <div
             key={craft._id}
-            className="card card-compact  group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            className="card card-compact  group relative cursor-pointer overflow-hidden  shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
           >
             <figure>
               <img

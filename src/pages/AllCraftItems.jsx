@@ -41,31 +41,31 @@ if(!crafts){
                     <tr>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  px-6 py-4 text-left"
                       >
                         SL
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  px-6 py-4 text-left"
                       >
                         Item Name
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  px-6 py-4 text-left"
                       >
                         Subcategory Name
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  px-6 py-4 text-left"
                       >
                         Price
                       </th>
                       <th
                         scope="col"
-                        className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+                        className="text-sm font-medium  px-6 py-4 text-left"
                       >
                         Action
                       </th>
@@ -73,20 +73,20 @@ if(!crafts){
                   </thead>
                   <tbody>
                     {crafts.map((craft, index) => (
-                      <tr key={craft._id} className="bg-gray-100 border-b">
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <tr key={craft._id} className=" border-b">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium ">
                           {index + 1}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm  font-light px-6 py-4 whitespace-nowrap">
                           {craft.itemName}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm  font-light px-6 py-4 whitespace-nowrap">
                           {craft.subcategoryName}
                         </td>
-                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td className="text-sm  font-light px-6 py-4 whitespace-nowrap">
                           {craft.price}
                         </td>
-                        <td className="text-sm text-gray-900 font-light py-2 whitespace-nowrap">
+                        <td className="text-sm  font-light py-2 whitespace-nowrap">
                           <Link to={`/crafts/${craft._id}`}>
                             <button className="btn bg-[#13e5c0] text-white">
                               View Details

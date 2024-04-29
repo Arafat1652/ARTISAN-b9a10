@@ -12,7 +12,7 @@ const Faq = () => {
 		</div>
 		
         
-        <div className=" flex flex-col mt-20  lg:mt-0 justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <div className=" flex flex-col mt-20  lg:mt-0 justify-center p-6 text-black text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
       <div className="collapse rounded-none mb-2 collapse-plus bg-indigo-200 hover:bg-indigo-400">
         <input type="radio" name="my-accordion-3" defaultChecked />
         <div className="collapse-title text-xl font-medium ">

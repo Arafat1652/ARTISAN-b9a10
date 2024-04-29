@@ -71,8 +71,8 @@ const AddCraft = () => {
   return (
     <div>
       <Nav></Nav>
-      <div className="p-24 bg-[#F4F3F0]">
-        <h3 className="text-3xl font-bold text-center mb-8 text-[#13131380]">
+      <div className="p-24 ">
+        <h3 className="text-3xl font-bold text-center mb-8">
           Add Craft Item
         </h3>
         <form onSubmit={handleAddCraft}>
