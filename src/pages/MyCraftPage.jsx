@@ -10,6 +10,7 @@ const MyCraftPage = () => {
   const { user } = useContext(AuthContext);
   const [craftItem, setCraftItem] = useState(null);
   const [displayCraft, setDisplayCraft] = useState([])
+  const [control, setControl] = useState(false)
 
   const handleCraftFilter = filter=>{
     if(filter === 'all'){
@@ -35,7 +36,7 @@ const MyCraftPage = () => {
         setCraftItem(data);
         setDisplayCraft(data)
       });
-  }, [user]);
+  }, [user, control]);
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -59,9 +60,9 @@ const MyCraftPage = () => {
                 text: "Your item has deleted.",
                 icon: "success",
               });
-
-              const remaining = craftItem.filter((cof) => cof._id !== _id);
-              setCraftItem(remaining);
+              setControl(!control)
+              // const remaining = craftItem.filter((cof) => cof._id !== _id);
+              // setCraftItem(remaining);
             }
           });
       }

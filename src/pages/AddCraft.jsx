@@ -1,57 +1,80 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Nav from "./Nav";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import Footer from "./Footer";
 import Swal from "sweetalert2";
 
 const AddCraft = () => {
-  const {user} = useContext(AuthContext)
-  const userName = user.displayName
-  const userEmail = user.email
-  const handleAddCraft = e =>{
-    e.preventDefault()
+  const { user } = useContext(AuthContext);
+  const [selectedValue, setSelectedValue] = useState('');
+  const [customizationValue, setCustomizationValue] = useState('');
+  const userName = user.displayName;
+  const userEmail = user.email;
+  // console.log('Selected option:', selectedValue);
+  const subcategoryName = selectedValue
+  const customization = customizationValue
+  const handleAddCraft = (e) => {
+    e.preventDefault();
     const form = e.target;
     const itemName = form.itemName.value;
-    const subcategoryName = form.subcategoryName.value;
+    // const subcategoryName = form.subcategoryName.value;
+    console.log('Selected option:', selectedValue);
+    // const select = form.selectedValue
+    // console.log(dropValue);
+    // 
     const shortDescription = form.shortDescription.value;
     const price = form.price.value;
     const rating = form.rating.value;
-    const customization = form.customization.value;
+    // const customization = form.customization.value;
     const processingTime = form.processingTime.value;
     const stockStatus = form.stockStatus.value;
     const photoUrl = form.photoUrl.value;
 
-    const craft = {itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl, userName, userEmail}  
+    const craft = {
+      itemName,
+      subcategoryName,
+      shortDescription,
+      price,
+      rating,
+      customization,
+      processingTime,
+      stockStatus,
+      photoUrl,
+      userName,
+      userEmail,
+    };
     console.log(craft);
 
-    fetch('https://b9a10-ar-02-server.vercel.app/crafts', {
+    fetch("https://b9a10-ar-02-server.vercel.app/crafts", {
       method: "POST",
-      headers:{
-        'content-type': 'application/json'
+      headers: {
+        "content-type": "application/json",
       },
-      body: JSON.stringify(craft)
+      body: JSON.stringify(craft),
     })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      if(data.insertedId){
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "Your data added in database",
-          showConfirmButton: false,
-          timer: 1500
-        });
-        form.reset()
-      }
-    })
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your data added in database",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          form.reset();
+        }
+      });
+  };
 
   return (
     <div>
       <Nav></Nav>
       <div className="p-24 bg-[#F4F3F0]">
-        <h3 className="text-3xl font-bold text-center mb-8 text-[#13131380]">Add Craft Item</h3>
+        <h3 className="text-3xl font-bold text-center mb-8 text-[#13131380]">
+          Add Craft Item
+        </h3>
         <form onSubmit={handleAddCraft}>
           {/* form row */}
           <div className="flex mb-5">
@@ -69,7 +92,7 @@ const AddCraft = () => {
               </label>
             </div>
 
-            <div className="form-control w-1/2 ml-4">
+            {/* <div className="form-control w-1/2 ml-4">
               <label className="label">
                 <span className="label-text">SubCategory Name</span>
               </label>
@@ -81,7 +104,26 @@ const AddCraft = () => {
                   className="input input-bordered w-full "
                 />
               </label>
+            </div> */}
+
+            {/* trying */}
+            <div className="form-control w-1/2 ml-4 ">
+            <label className="label">
+                <span className="label-text">SubCategory Name</span>
+              </label>
+              <div className="input-group">
+                <select onChange={(e)=>setSelectedValue(e.target.value)} value={selectedValue} className="select select-bordered w-full"> 
+                  <option></option>
+                  <option >Landscape Painting</option>
+                  <option >Portrait Drawing</option>
+                  <option >Watercolour Painting</option>
+                  <option >Oil Painting</option>
+                  <option >Charcoal Sketching</option>
+                  <option >Cartoon Drawing</option>
+                </select>
+              </div>
             </div>
+            {/*  */}
           </div>
           {/* form row */}
           <div className="flex mb-5">
@@ -129,7 +171,8 @@ const AddCraft = () => {
               </label>
             </div>
 
-            <div className="form-control w-1/2 ml-4">
+            {/* customization */}
+            {/* <div className="form-control w-1/2 ml-4">
               <label className="label">
                 <span className="label-text">Customization</span>
               </label>
@@ -139,9 +182,26 @@ const AddCraft = () => {
                   name="customization"
                   placeholder="Customization"
                   className="input input-bordered w-full "
-                />
+                  />
               </label>
+            </div> */}
+              {/* customization */}
+
+               {/* trying */}
+            <div className="form-control w-1/2 ml-4 ">
+            <label className="label">
+                <span className="label-text">Customization</span>
+              </label>
+              <div className="input-group">
+                <select onChange={(e)=>setCustomizationValue(e.target.value)} value={customizationValue} className="select select-bordered w-full"> 
+                 <option></option>
+                  <option >Yes</option>
+                  <option >No</option>
+                </select>
+              </div>
             </div>
+            {/*  */}
+
           </div>
           {/* form row */}
           <div className="flex mb-5">
@@ -183,11 +243,11 @@ const AddCraft = () => {
               </label>
               <label className="input-group">
                 <input
-                
                   type="text"
                   defaultValue={userEmail}
                   className="input input-bordered w-full"
-                  readOnly />
+                  readOnly
+                />
               </label>
             </div>
 
@@ -200,7 +260,8 @@ const AddCraft = () => {
                   type="text"
                   defaultValue={userName}
                   className="input input-bordered w-full "
-                  readOnly />
+                  readOnly
+                />
               </label>
             </div>
           </div>
@@ -220,7 +281,7 @@ const AddCraft = () => {
                 />
               </label>
             </div>
-            </div>
+          </div>
 
           <input
             type="submit"
@@ -229,10 +290,9 @@ const AddCraft = () => {
           />
         </form>
       </div>
-      <div>
-      </div>
+      <div></div>
       <div className="mt-24">
-      <Footer></Footer>
+        <Footer></Footer>
       </div>
     </div>
   );

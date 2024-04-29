@@ -25,7 +25,7 @@ const Nav = () => {
     document.querySelector('html').setAttribute('data-theme', newTheme);
   };
 
-  console.log(theme,'theme')
+  // console.log(theme,'theme')
 
  
     const navLink = <>
