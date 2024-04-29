@@ -122,7 +122,7 @@ const MyCraftPage = () => {
           >
             <figure>
               <img
-                className="lg:h-[350px] md:h-[350px] w-full object-cover object-center"
+                className="lg:h-[350px] md:h-[350px] w-full object-cover object-center transition duration-300 ease-in-out hover:scale-110"
                 src={craft.photoUrl}
                 alt="Shoes"
               />

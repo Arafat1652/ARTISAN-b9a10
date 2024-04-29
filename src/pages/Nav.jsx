@@ -101,8 +101,8 @@ const handleLogOut =()=>{
                   </div>
                   </div>
               </div>
-           <button onClick={handleLogOut} className="btn bg-[#fb8053] ml-4 text-white font-bold px-4">Logout</button>
-           </> :  <><Link to='/login'><button className="btn bg-[#13e5c0] text-black">LOGIN</button></Link>
+           <button onClick={handleLogOut} className="btn bg-[#fb8053] ml-4 font-bold px-4">Logout</button>
+           </> :  <><Link to='/login'><button className="btn bg-[#13e5c0]">LOGIN</button></Link>
                     <Link to='/register'><button className="btn bg-[#BACD92] ml-2">Register</button></Link>
                     </>
         }

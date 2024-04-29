@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const CraftItem = ({craft}) => {
     const  {_id,itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl, userName, userEmail} = craft
   return (
-    <div className="card card-compact  group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+    <div className="card card-compact  group relative cursor-pointer overflow-hidden shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
       <figure>
         <img
-        className="lg:h-[350px] md:h-[350px] w-full object-cover object-center"
+        className="lg:h-[350px] md:h-[350px] w-full object-cover object-center transition duration-300 ease-in-out hover:scale-110"
           src={photoUrl}
           alt="Shoes"
           
@@ -28,7 +28,7 @@ const CraftItem = ({craft}) => {
         {/* <div className="card-actions w-full">
           <button className="btn bg-[#13e5c0] w-full text-white font-bold">View Details</button>
         </div> */}
-        <Link to={`/crafts/${_id}`} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-purple-50 text-black inline-block">
+        <Link to={`/crafts/${_id}`} className="px-5 py-2.5 relative rounded group overflow-hidden font-medium  inline-block">
 <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-[#13e5c0] group-hover:h-full opacity-90"></span>
 <span className="relative group-hover:text-white text-lg">View Details</span>
 </Link> 

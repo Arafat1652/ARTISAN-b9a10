@@ -19,7 +19,7 @@ const ArtCraftDetails = () => {
                 subItem.map(item=>  <div key={item._id} className="card card-compact  group relative cursor-pointer overflow-hidden bg-white shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
                 <figure>
                   <img
-                  className="lg:h-[350px] md:h-[350px] w-full object-cover object-center"
+                  className="lg:h-[350px] md:h-[350px] w-full object-cover object-center transition duration-300 ease-in-out hover:scale-110"
                     src={item.photoUrl}
                     alt="Shoes"
                     
