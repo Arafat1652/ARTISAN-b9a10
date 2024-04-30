@@ -5,6 +5,7 @@ import { FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet-async";
 
 const MyCraftPage = () => {
   const { user } = useContext(AuthContext);
@@ -79,6 +80,9 @@ const MyCraftPage = () => {
 
   return (
     <div>
+      <Helmet>
+                <title>My art & craft || ARTISAN</title>
+            </Helmet>
       <Nav></Nav>
       <h2 className="text-3xl text-center max-w-[98%] mx-auto bg-[#f3f3f3] py-8 mb-8  mt-10 font-semibold">
         My Crafts

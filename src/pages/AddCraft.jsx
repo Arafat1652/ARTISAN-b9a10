@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import Footer from "./Footer";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -70,6 +71,9 @@ const AddCraft = () => {
 
   return (
     <div>
+      <Helmet>
+                <title>Add craft item || ARTISAN</title>
+            </Helmet>
       <Nav></Nav>
       <div className="p-24 ">
         <h3 className="text-3xl font-bold text-center mb-8">
@@ -109,7 +113,7 @@ const AddCraft = () => {
             {/* trying */}
             <div className="form-control w-1/2 ml-4 ">
             <label className="label">
-                <span className="label-text">SubCategory Name</span>
+                <span className="label-text">SubCategory</span>
               </label>
               <div className="input-group">
                 <select onChange={(e)=>setSelectedValue(e.target.value)} value={selectedValue} className="select select-bordered w-full"> 
@@ -129,7 +133,7 @@ const AddCraft = () => {
           <div className="flex mb-5">
             <div className="form-control w-1/2">
               <label className="label">
-                <span className="label-text">Short Description</span>
+                <span className="label-text">Description</span>
               </label>
               <label className="input-group">
                 <input

@@ -68,7 +68,7 @@ const handleLogOut =()=>{
          {navLink}
           </ul>
         </div>
-        <a  className="flex items-center lg:gap-2 md:text-2xl lg:text-2xl font-bold"><RiBuilding2Fill className="fill-indigo-600"></RiBuilding2Fill> ARTISAN</a>
+        <a  className="md:text-2xl lg:text-2xl font-bold"> ARTISAN</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className=" menu-horizontal px-1 ">
@@ -78,7 +78,7 @@ const handleLogOut =()=>{
       <div className="navbar-end">
     {/* toagle */}
 
-    <label className="cursor-pointer mr-8 grid place-items-center">
+    <label className="cursor-pointer mr-2 md:mr-8 lg:mr-8 grid place-items-center">
     <input
               onChange={handleThemeToogle}
               type="checkbox"
@@ -101,9 +101,9 @@ const handleLogOut =()=>{
                   </div>
                   </div>
               </div>
-           <button onClick={handleLogOut} className="btn bg-[#fb8053] ml-4 font-bold px-4">Logout</button>
-           </> :  <><Link to='/login'><button className="btn bg-[#13e5c0]">LOGIN</button></Link>
-                    <Link to='/register'><button className="btn bg-[#BACD92] ml-2">Register</button></Link>
+           <button onClick={handleLogOut} className="btn bg-[#fb8053] border-none ml-4 font-bold px-4">Logout</button>
+           </> :  <><Link to='/login'><button className="btn bg-[#13e5c0] border-none">LOGIN</button></Link>
+                    <Link to='/register'><button className="btn bg-[#BACD92] ml-2 border-none">Register</button></Link>
                     </>
         }
     

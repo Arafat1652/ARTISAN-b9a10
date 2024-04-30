@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import Footer from "./Footer";
 import { FaRegStar } from "react-icons/fa";
 import { AiTwotoneTag } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
 
 
 const ViewDetailCraft = () => {
@@ -14,7 +15,9 @@ const ViewDetailCraft = () => {
 
     return (
         <div>
-       
+       <Helmet>
+                <title>{itemName} || ARTISAN</title>
+            </Helmet>
        <Nav></Nav>
        {/* card */}
        

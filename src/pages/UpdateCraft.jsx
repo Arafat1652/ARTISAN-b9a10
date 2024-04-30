@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateCraft = () => {
@@ -63,9 +64,12 @@ const UpdateCraft = () => {
 
     return (
         <div>
+          <Helmet>
+                <title> Update || ARTISAN</title>
+            </Helmet>
         <Nav></Nav>
-        <div className="p-24 bg-[#F4F3F0]">
-          <h3 className="text-3xl font-bold text-center mb-8 text-[#13131380]">Update Craft Item</h3>
+        <div className="p-24 ">
+          <h3 className="text-3xl font-bold text-center mb-8 ">Update Craft Item</h3>
           <form onSubmit={handleUpdate}>
             {/* form row */}
             <div className="flex mb-5">
@@ -85,7 +89,7 @@ const UpdateCraft = () => {
   
               <div className="form-control w-1/2 ml-4">
                 <label className="label">
-                  <span className="label-text">SubCategory Name</span>
+                  <span className="label-text">SubCategory</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -101,7 +105,7 @@ const UpdateCraft = () => {
             <div className="flex mb-5">
               <div className="form-control w-1/2">
                 <label className="label">
-                  <span className="label-text">Short Description</span>
+                  <span className="label-text">Description</span>
                 </label>
                 <label className="input-group">
                   <input

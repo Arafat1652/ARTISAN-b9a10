@@ -23,6 +23,7 @@ import MyCraftPage from './pages/MyCraftPage';
 import UpdateCraft from './pages/UpdateCraft';
 import ErrorPage from './pages/ErrorPage';
 import ArtCraftDetails from './pages/ArtCraftDetails';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -77,9 +78,11 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <HelmetProvider>
     <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+    </HelmetProvider>
     <ToastContainer position="top-center" autoClose={2000}/>
   </React.StrictMode>,
 )

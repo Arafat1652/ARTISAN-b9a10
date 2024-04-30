@@ -4,6 +4,8 @@ import { FaRegStar } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { MdAccessTime } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 
 const ArtCraftDetails = () => {
@@ -12,7 +14,10 @@ const ArtCraftDetails = () => {
     // const  {_id,itemName, subcategoryName, shortDescription, price, rating, customization, processingTime, stockStatus, photoUrl, userName, userEmail} = subItems
     console.log(subItem);
     return (
-        <div className="">
+        <div className="px-2 md:px-2 lg:px-0">
+          <Helmet>
+                <title>sub categroy || ARTISAN</title>
+            </Helmet>
             <Nav></Nav>
             <div className="grid max-w-7xl my-24 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
             {
@@ -33,7 +38,8 @@ const ArtCraftDetails = () => {
                   <p>{item.shortDescription}</p>
                   <hr />
                   <div className="flex justify-between mt-2 mb-4">
-                          <h3 className="flex items-center text-lg gap-1"><FaRegStar ></FaRegStar>{item.rating}</h3>
+                          <h3 className="flex items-center font-bold text-lg gap-1"><FaRegStar ></FaRegStar>{item.rating}</h3>
+                          <h3 className="text-lg font-bold flex items-center gap-1"><MdAccessTime ></MdAccessTime>{item.processingTime}</h3>
                           <h3 className="text-lg font-bold">{item.price}</h3>
                       </div>
                       

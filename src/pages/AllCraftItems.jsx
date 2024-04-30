@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Footer from "./Footer";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AllCraftItems = () => {
   // const crafts = useLoaderData();
@@ -26,6 +27,9 @@ if(!crafts){
 
   return (
     <div>
+      <Helmet>
+                <title>All art & crafts || ARTISAN</title>
+            </Helmet>
       <Nav></Nav>
       {/* table */}
       <h2 className="text-3xl text-center max-w-[98%] mx-auto bg-[#f3f3f3] py-8 mb-8  mt-10 font-semibold">

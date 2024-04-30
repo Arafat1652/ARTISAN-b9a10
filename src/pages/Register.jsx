@@ -8,6 +8,8 @@ import { FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Footer from "./Footer";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import Nav from "./Nav";
 
 
 const Register = () => {
@@ -56,8 +58,11 @@ const Register = () => {
 
     return (
         <div>
-            
-           <div data-aos='fade-left' data-aos-duration='1000' className="w-full max-w-md my-10 p-8 space-y-3 rounded-xl mx-auto bg-base-200 text-gray-100">
+            <Helmet>
+                <title>Register || ARTISAN</title>
+            </Helmet>
+            <Nav></Nav>
+           <div className="w-full max-w-md my-10 p-8 space-y-3 rounded-xl mx-auto bg-base-200 text-gray-100">
         <h1 className="text-2xl font-bold text-center text-gray-700">Register</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-1 text-sm">

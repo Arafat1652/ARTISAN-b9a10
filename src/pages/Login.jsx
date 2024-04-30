@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -76,6 +77,9 @@ const Login = () => {
     return (
         
      <div>
+        <Helmet>
+                <title>Login || ARTISAN</title>
+            </Helmet>
         <Nav></Nav>
         
            <div className="w-full max-w-md my-10 p-8 space-y-3 rounded-xl mx-auto bg-base-200 text-gray-100">
