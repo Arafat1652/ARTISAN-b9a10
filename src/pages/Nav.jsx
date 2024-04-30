@@ -68,7 +68,7 @@ const handleLogOut =()=>{
          {navLink}
           </ul>
         </div>
-        <a  className="md:text-2xl lg:text-2xl font-bold"> ARTISAN</a>
+        <a  className="md:text-2xl lg:text-2xl font-bold">ARTISAN</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className=" menu-horizontal px-1 ">
@@ -78,7 +78,7 @@ const handleLogOut =()=>{
       <div className="navbar-end">
     {/* toagle */}
 
-    <label className="cursor-pointer mr-2 md:mr-8 lg:mr-8 grid place-items-center">
+    <label className="cursor-pointer mr-2 md:mr-5 lg:mr-5 grid place-items-center">
     <input
               onChange={handleThemeToogle}
               type="checkbox"
